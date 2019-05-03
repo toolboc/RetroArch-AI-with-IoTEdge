@@ -1,5 +1,5 @@
-# RetroArch-AI-with-IoTEdge
-Using [IoTEdge](https://docs.microsoft.com/en-us/azure/iot-edge/?wt.mc_id=RetroArchAIwithIoTEdge-github-pdecarlo) with [Cognitive Services Containers](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-container-support?wt.mc_id=RetroArchAIwithIoTEdge-github-pdecarlo) to enhance Retro Video Games 🧠+🎮
+# RetroArch-AI-with-IoTEdge 🧠+🎮
+Using [IoTEdge](https://docs.microsoft.com/en-us/azure/iot-edge/?wt.mc_id=RetroArchAIwithIoTEdge-github-pdecarlo) with [Cognitive Services Containers](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-container-support?wt.mc_id=RetroArchAIwithIoTEdge-github-pdecarlo) to enhance Retro Video Games
 
 This project uses AI services running side-by-side [Retroarch](https://www.retroarch.com/) on top of [Lakka](www.lakka.tv/
 ) through the use of containers to allow for interesting interactions with Retroarch in a modular and remotely configurable fashion.

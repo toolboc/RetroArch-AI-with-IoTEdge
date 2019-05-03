@@ -1,5 +1,5 @@
 # RetroArch-AI-with-IoTEdge
-Using [IoTEdge](https://docs.microsoft.com/en-us/azure/iot-edge/?wt.mc_id=RetroArchAIwithIoTEdge-github-pdecarlo) with [Cognitive Services Containers](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-container-support?wt.mc_id=RetroArchAIwithIoTEdge-github-pdecarlo) to enhance Retro Video Games 🎮
+Using [IoTEdge](https://docs.microsoft.com/en-us/azure/iot-edge/?wt.mc_id=RetroArchAIwithIoTEdge-github-pdecarlo) with [Cognitive Services Containers](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-container-support?wt.mc_id=RetroArchAIwithIoTEdge-github-pdecarlo) to enhance Retro Video Games 🧠+🎮
 
 This project uses AI services running side-by-side [Retroarch](https://www.retroarch.com/) on top of [Lakka](www.lakka.tv/
 ) through the use of containers to allow for interesting interactions with Retroarch in a modular and remotely configurable fashion.
@@ -48,7 +48,7 @@ Language values can be obtained from the [Microsoft Text Translator Language Sup
 
 Requires an x64 compatible device with a screen and HDMI out and access to the [Cogntive Services Computer Vision Containers Preview](https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/computer-vision-how-to-install-containers#request-access-to-the-private-container-registry?wt.mc_id=RetroArchAIwithIoTEdge-github-pdecarlo).
 
-1 - Download the [latest Lakka.img.gz release from this fork of Lakka-LibreELEC](https://github.com/toolboc/Lakka-LibreELEC/releases/download/RetroArch-AI-with-IoTEdge_v1/Lakka-Generic.x86_64-2.2-RetroArch-AI-with-IoTEdge.img.gz) and install it by following these [instructions](http://www.lakka.tv/get/windows/generic/install/)).
+1 - Download the [latest Lakka.img.gz release from this fork of Lakka-LibreELEC](https://github.com/toolboc/Lakka-LibreELEC/releases/download/RetroArch-AI-with-IoTEdge_v1/Lakka-Generic.x86_64-2.2-RetroArch-AI-with-IoTEdge.img.gz) and install it by following these [instructions](http://www.lakka.tv/get/windows/generic/install/).
 
 2 - After installation, configure the device to output the RetroArch UI over HDMI by select the appropriate monitor index in [Video Settings](http://www.lakka.tv/doc/Video-settings/), you may also want to configure audio output to route over HDMI as well by configuring the appropriate Audio Device in [Audio Settings](http://www.lakka.tv/doc/Audio-settings/).
 

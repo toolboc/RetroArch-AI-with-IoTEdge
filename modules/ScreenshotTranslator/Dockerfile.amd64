@@ -1,0 +1,32 @@
+FROM microsoft/dotnet:2.1-sdk AS build-env
+WORKDIR /app
+
+COPY *.csproj ./
+RUN dotnet restore
+
+COPY . ./
+RUN dotnet publish -c Release -o out
+
+FROM microsoft/dotnet:2.1-runtime-stretch-slim
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        fbi \
+        libgdiplus \
+        libc6-dev \
+        fonts-takao-mincho \
+        fonts-nanum \
+        fonts-nanum-extra \
+        ttf-sil-scheherazade \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN ln -s /usr/lib/libgdiplus.so /usr/lib/gdiplus.dll
+
+WORKDIR /app
+COPY --from=build-env /app/out ./
+COPY --from=build-env /app/assets ./
+
+#Need to run as root to access framebuffer
+#RUN useradd -ms /bin/bash moduleuser
+#USER moduleuser
+
+ENTRYPOINT ["dotnet", "ScreenshotTranslator.dll"]

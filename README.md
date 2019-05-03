@@ -1,7 +1,7 @@
 # RetroArch-AI-with-IoTEdge
-Using IoTEdge with Cognitive Services Containers to enhance Retro Video Games 🎮
+Using [IoTEdge](https://docs.microsoft.com/en-us/azure/iot-edge/?wt.mc_id=RetroArchAIwithIoTEdge-github-pdecarlo) with [Cognitive Services Containers](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-container-support?wt.mc_id=RetroArchAIwithIoTEdge-github-pdecarlo) to enhance Retro Video Games 🎮
 
-This project attempts leverages AI services running side-by-side [Retroarch](https://www.retroarch.com/) on top of [Lakka](www.lakka.tv/
+This project uses AI services running side-by-side [Retroarch](https://www.retroarch.com/) on top of [Lakka](www.lakka.tv/
 ) through the use of containers to allow for interesting interactions with Retroarch in a modular and remotely configurable fashion.
 
 ## Current Modules
@@ -14,7 +14,7 @@ This project attempts leverages AI services running side-by-side [Retroarch](htt
 
 ![Demo](https://i.imgur.com/sXnbjOi.gif)
 
-*Translates screenshots captured in /storage/screenshots/ to the framebuffer of fb0 using a local container instance of [cognitive-services-recognize-text](https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/computer-vision-how-to-install-containers#docker-pull-for-the-recognize-text-container)*
+*Translates screenshots captured in /storage/screenshots/ for display to the framebuffer of fb0 using a local container instance of [cognitive-services-recognize-text](https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/computer-vision-how-to-install-containers#docker-pull-for-the-recognize-text-container)  and a custom ScreenshotTranlator module for IoT Edge*
 
 | Parameter      | Description |   Type        |
 | -------------- | ------------| --------- |

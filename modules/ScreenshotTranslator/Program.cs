@@ -197,7 +197,7 @@ namespace ScreenshotTranslator
             {
                 imageContent.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
 
-                var requestAddress = RecognizeTextEndpoint + "/vision/v2.0/recognizetextDirect";
+                var requestAddress = RecognizeTextEndpoint + "/vision/v3.1-preview.2/read/syncAnalyze";
 
                 using (var response = await client.PostAsync(requestAddress, imageContent))
                 {
@@ -229,7 +229,7 @@ namespace ScreenshotTranslator
             Graphics graph = Graphics.FromImage(image);
             
             //Blackout original Text
-            foreach (var line in resultAsJson["lines"])
+            foreach (var line in resultAsJson["analyzeResult"]["readResults"][0]["lines"])
             {          
 
                 // Create points that define polygon.
@@ -250,14 +250,11 @@ namespace ScreenshotTranslator
             }
 
             //Translate and print Text
-            foreach (var line in resultAsJson["lines"])
+            foreach (var line in resultAsJson["analyzeResult"]["readResults"][0]["lines"])
             {          
                 string translatedText = string.Empty;
 
-                if(Language != "en")
-                    translatedText = await TranslateText(line["text"] + "\n");
-                else
-                    translatedText = line["text"] + "\n";
+                translatedText = await TranslateText(line["text"] + "\n");
 
                 int x = (int)line["boundingBox"][0];
                 int y = (int)line["boundingBox"][1];

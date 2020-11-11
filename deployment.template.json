@@ -22,7 +22,7 @@
           "edgeAgent": {
             "type": "docker",
             "settings": {
-              "image": "mcr.microsoft.com/azureiotedge-agent:1.0",
+              "image": "mcr.microsoft.com/azureiotedge-agent:1.0.8",
               "createOptions": {}
             }
           },
@@ -31,7 +31,7 @@
             "status": "running",
             "restartPolicy": "always",
             "settings": {
-              "image": "mcr.microsoft.com/azureiotedge-hub:1.0",
+              "image": "mcr.microsoft.com/azureiotedge-hub:1.0.8",
               "createOptions": {
                 "HostConfig": {
                   "PortBindings": {
@@ -63,12 +63,12 @@
             "status": "running",
             "restartPolicy": "always",
             "settings": {
-              "image": "containerpreview.azurecr.io/microsoft/cognitive-services-recognize-text:latest",
+              "image": "mcr.microsoft.com/azure-cognitive-services/vision/read:3.1-preview",
               "createOptions": 
               {                       
                 "Cmd": [
                     "Eula=accept",
-                    "Billing=https://{YourBillingEndpointLocale}.api.cognitive.microsoft.com/vision/v2.0",
+                    "Billing=https://{YourBillingEndpointLocale}.api.cognitive.microsoft.com",
                     "ApiKey={YourCognitiveServicesApiKey}"
                 ],
                 "HostConfig": {

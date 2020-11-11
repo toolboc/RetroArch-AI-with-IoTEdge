@@ -56,7 +56,8 @@ Requires an x64 compatible device with a screen and HDMI out and access to the [
 
 4 - SSH into your Lakka Device by following these [instructions](http://www.lakka.tv/doc/Accessing-Lakka-command-line-interface/) and execute the following commands to install the Docker Add-On:
 ```
-cd ~/.kodi/
+mkdir ~/.kodi/addons
+cd ~/.kodi/addon
 
 wget https://github.com/toolboc/Lakka-LibreELEC/releases/download/RetroArch-AI-with-IoTEdge_v1/service.system.docker-8.2.122.zip
 
@@ -64,7 +65,7 @@ unzip service.system.docker-8.2.122.zip
 
 cd ~/.kodi/addons/service.system.docker/system.d/
 
-systemctl enable service.system.docker.service
+systemctl enable ~/.kodi/addons/service.system.docker/system.d/service.system.docker.service
 
 reboot
 ```

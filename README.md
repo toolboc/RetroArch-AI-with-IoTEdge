@@ -48,7 +48,7 @@ Language values can be obtained from the [Microsoft Text Translator Language Sup
 
 Requires an x64 compatible device with a screen and HDMI out and access to the [Cogntive Services Computer Vision Containers Preview](https://docs.microsoft.com/azure/cognitive-services/computer-vision/computer-vision-how-to-install-containers?WT.mc_id=iot-0000-pdecarlo#request-access-to-the-private-container-registry?wt.mc_id=RetroArchAIwithIoTEdge-github-pdecarlo).
 
-1 - Download the [latest Lakka.img.gz release from this fork of Lakka-LibreELEC](https://github.com/toolboc/Lakka-LibreELEC/releases/download/RetroArch-AI-with-IoTEdge_v1/Lakka-Generic.x86_64-2.2-RetroArch-AI-with-IoTEdge.img.gz) and install it by following these [instructions](http://www.lakka.tv/get/windows/generic/install/).
+1 - Download the [latest Lakka.img.gz release from this fork of Lakka-LibreELEC](https://github.com/toolboc/Lakka-LibreELEC-RetroArch-AI-with-IoTEdge/releases/download/RetroArch-AI-with-IoTEdge_v1/Lakka-Generic.x86_64-2.2-RetroArch-AI-with-IoTEdge.img.gz) and install it by following these [instructions](http://www.lakka.tv/get/windows/generic/install/).
 
 2 - After installation, configure the device to output the RetroArch UI over HDMI by select the appropriate monitor index in [Video Settings](http://www.lakka.tv/doc/Video-settings/), you may also want to configure audio output to route over HDMI as well by configuring the appropriate Audio Device in [Audio Settings](http://www.lakka.tv/doc/Audio-settings/).
 
@@ -59,7 +59,7 @@ Requires an x64 compatible device with a screen and HDMI out and access to the [
 mkdir ~/.kodi/addons
 cd ~/.kodi/addon
 
-wget https://github.com/toolboc/Lakka-LibreELEC/releases/download/RetroArch-AI-with-IoTEdge_v1/service.system.docker-8.2.122.zip
+wget https://github.com/toolboc/Lakka-LibreELEC-RetroArch-AI-with-IoTEdge/releases/download/RetroArch-AI-with-IoTEdge_v1/service.system.docker-8.2.122.zip
 
 unzip service.system.docker-8.2.122.zip
 
@@ -88,7 +88,9 @@ docker ps
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/storage/.kodi/addons/service.system.docker/bin
 docker ps
 ```
-Create an instance of an [azure-iot-edge-device-container](https://github.com/toolboc/azure-iot-edge-device-container) with (be sure to replace <IoTHubDeviceConnectionString> with the key obtained in Step 5):
+Create an instance of an [azure-iot-edge-device-container](https://github.com/
+
+/azure-iot-edge-device-container) with (be sure to replace <IoTHubDeviceConnectionString> with the key obtained in Step 5):
 
 ```
 docker run --name edge-device-container --restart always -d --privileged -v /storage/screenshots:/storage/screenshots -v /dev/fb0:/dev/fb0 -e connectionString='<IoTHubDeviceConnectionString>' toolboc/azure-iot-edge-device-container

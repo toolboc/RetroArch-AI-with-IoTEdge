@@ -60,17 +60,23 @@
           "cognitive-services-recognize-text": {
             "version": "1.0",
             "type": "docker",
+            "env": {
+                "Eula": {
+                    "value": "accept"
+                },
+                "Billing": {
+                    "value": "{YourBillingEndpointLocale}.api.cognitive.microsoft.com"
+                },
+                "ApiKey": {
+                    "value": "{YourCognitiveServicesApiKey}"
+                }
+            },
             "status": "running",
             "restartPolicy": "always",
             "settings": {
-              "image": "mcr.microsoft.com/azure-cognitive-services/vision/read:3.1-preview",
+              "image": "mcr.microsoft.com/azure-cognitive-services/vision/read:3.2-preview.2",
               "createOptions": 
               {                       
-                "Cmd": [
-                    "Eula=accept",
-                    "Billing=https://{YourBillingEndpointLocale}.api.cognitive.microsoft.com",
-                    "ApiKey={YourCognitiveServicesApiKey}"
-                ],
                 "HostConfig": {
                   "PortBindings": {
                   "5000/tcp": [

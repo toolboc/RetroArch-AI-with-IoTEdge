@@ -197,7 +197,7 @@ namespace ScreenshotTranslator
             {
                 imageContent.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
 
-                var requestAddress = RecognizeTextEndpoint + "/vision/v3.1-preview.2/read/syncAnalyze";
+                var requestAddress = RecognizeTextEndpoint + "/vision/v3.2-preview.2/read/syncAnalyze";
 
                 using (var response = await client.PostAsync(requestAddress, imageContent))
                 {
